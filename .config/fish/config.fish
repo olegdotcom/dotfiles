@@ -3,6 +3,8 @@ if status is-interactive
 
     fish_add_path /opt/homebrew/bin
 
+    neofetch
+
     # Function to sync history after each command
     function sync_history --on-event fish_preexec
         history --merge
