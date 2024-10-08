@@ -1,8 +1,6 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
-
+    # Commands to run in interactive sessions
     fish_add_path /opt/homebrew/bin
-
     neofetch
 
     # Function to sync history after each command
@@ -15,8 +13,7 @@ if status is-interactive
         history --save
     end
 
-    # Bind keys to the fzf functions
-    bind \cf fzf_find_file
-    bind \cr fzf_history_search
-
+    # FZF config
+    fzf --fish | source
+    set -gx FZF_DEFAULT_OPTS '--no-height --no-reverse --border'
 end
