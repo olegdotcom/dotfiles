@@ -26,7 +26,8 @@ map("n", "<leader>fh", require("fzf-lua").help_tags, { desc = "Find help", unpac
 map("n", "<leader>fc", require("fzf-lua").commands, { desc = "Find commands", unpack(opts) })
 
 -- LSP
---map("n", "<leader>d", vim.lsp.buf.definition, { desc = "Go to definition", unpack(opts) })
---map("n", "<leader>r", vim.lsp.buf.references, { desc = "Find references", unpack(opts) })
---map("n", "<leader>n", vim.lsp.buf.rename, { desc = "Rename symbol", unpack(opts) })
---map("n", "<leader>a", vim.lsp.buf.code_action, { desc = "Code action", unpack(opts) })
+map("n", "<leader>d", vim.lsp.buf.definition, { desc = "Go to definition", unpack(opts) })
+map("n", "<leader>r", vim.lsp.buf.references, { desc = "Find references", unpack(opts) })
+map("n", "<leader>n", vim.lsp.buf.rename, { desc = "Rename symbol", unpack(opts) })
+map("n", "<leader>a", vim.lsp.buf.code_action, { desc = "Code action", unpack(opts) })
+map("n", "<leader>w", vim.diagnostic.open_float, { desc = "Show diagnostic message", unpack(opts) })

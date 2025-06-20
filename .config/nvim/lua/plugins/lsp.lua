@@ -18,8 +18,10 @@ return {
         sources = {
           { name = "nvim_lsp" },
         },
+        experimental = {
+          ghost_text = false,
+        },
       })
     end,
   },
 }
-

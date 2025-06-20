@@ -11,20 +11,6 @@ local function on_attach(client, bufnr)
       end,
     })
   end
-
-  local map = function(mode, lhs, rhs, desc)
-    vim.keymap.set(mode, lhs, rhs, {
-      buffer = bufnr,
-      desc = desc,
-      noremap = true,
-      silent = true,
-    })
-  end
-
-  map("n", "<leader>d", vim.lsp.buf.definition, "Go to definition")
-  map("n", "<leader>r", vim.lsp.buf.references, "Find references")
-  map("n", "<leader>n", vim.lsp.buf.rename, "Rename symbol")
-  map("n", "<leader>a", vim.lsp.buf.code_action, "Code action")
 end
 
 -- Lua

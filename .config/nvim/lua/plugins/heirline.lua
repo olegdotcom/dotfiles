@@ -12,12 +12,8 @@ return {
       local FileName = {
         provider = function()
           local bufname = vim.api.nvim_buf_get_name(0)
-          if bufname == "" then
-            return " [No Name] "
-          else
-            local filename = vim.fs.basename(bufname)
-            return " " .. filename .. " "
-          end
+          local filename = vim.fs.basename(bufname)
+          return " " .. filename .. " "
         end,
         hl = { fg = "white" },
       }
