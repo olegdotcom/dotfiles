@@ -12,6 +12,7 @@ return {
   },
   {
     "ibhagwan/fzf-lua",
+    name = "fzf-lua",
     config = function()
       require("fzf-lua").setup({
         sort_lastused = true,
@@ -20,6 +21,7 @@ return {
   },
   {
     "akinsho/toggleterm.nvim",
+    name = "toggleterm",
     config = function()
       require("toggleterm").setup({
         direction = "horizontal",

@@ -1,6 +1,7 @@
 return {
   {
     "stevearc/aerial.nvim",
+    name = "aerial",
     config = function()
       require("aerial").setup({
         backends = { "lsp", "treesitter", "markdown" },

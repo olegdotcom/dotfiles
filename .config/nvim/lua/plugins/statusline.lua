@@ -1,6 +1,7 @@
 return {
   {
     "rebelot/heirline.nvim",
+    name = "heirline",
     config = function()
       local Mode = {
         provider = function()

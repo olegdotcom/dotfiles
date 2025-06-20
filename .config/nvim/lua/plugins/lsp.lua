@@ -5,6 +5,7 @@ return {
   -- Completion
   {
     "hrsh7th/nvim-cmp",
+    name = "cmp",
     dependencies = {
       "hrsh7th/cmp-nvim-lsp",
     },
