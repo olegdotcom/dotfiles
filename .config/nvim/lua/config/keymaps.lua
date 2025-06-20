@@ -24,7 +24,4 @@ map("n", "<leader>fb", require("fzf-lua").buffers, { desc = "Find buffer", unpac
 map("n", "<leader>fh", require("fzf-lua").help_tags, { desc = "Find help", unpack(opts) })
 -- Commands
 map("n", "<leader>fc", require("fzf-lua").commands, { desc = "Find commands", unpack(opts) })
--- Git
-map("n", "<leader>gs", require("fzf-lua").git_status, { desc = "Git status", unpack(opts) })
-map("n", "<leader>gc", require("fzf-lua").git_commits, { desc = "Git commits", unpack(opts) })
 

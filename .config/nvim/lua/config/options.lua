@@ -8,5 +8,5 @@ vim.opt.expandtab = true  -- Convert tabs to spaces
 vim.opt.number = true         -- show absolute line number on the current line
 vim.opt.relativenumber = true -- show relative line numbers on all other lines
 
-vim.opt.colorcolumn = "81" -- shows the column after the 80th char
+-- vim.opt.colorcolumn = "81" -- shows the column after the 80th char
 
