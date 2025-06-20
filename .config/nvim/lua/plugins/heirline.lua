@@ -21,7 +21,7 @@ return {
         end,
         hl = { fg = "white" },
       }
-      local Align = { provider = "%=" }  -- pushes content to the right
+      local Align = { provider = "%=" } -- pushes content to the right
       local FilePercent = {
         provider = function()
           local curr = vim.fn.line(".")

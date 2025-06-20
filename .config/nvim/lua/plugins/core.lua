@@ -5,7 +5,7 @@ return {
     priority = 1000,
     config = function()
       require("catppuccin").setup({
-        flavour = "frappe", -- options: latte, frappe, macchiato, mocha
+        flavour = "macchiato", -- options: latte, frappe, macchiato, mocha
       })
       vim.cmd.colorscheme "catppuccin"
     end,
@@ -14,7 +14,7 @@ return {
     "ibhagwan/fzf-lua",
     config = function()
       require("fzf-lua").setup({
-      	sort_lastused = true,
+        sort_lastused = true,
       })
     end,
   },
@@ -29,4 +29,3 @@ return {
     end,
   }
 }
-
