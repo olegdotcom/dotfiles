@@ -6,6 +6,7 @@
   "fzf-lua": { "branch": "main", "commit": "05eaee319fcf2f5a0d378c2848641858c8b8962e" },
   "heirline": { "branch": "master", "commit": "fae936abb5e0345b85c3a03ecf38525b0828b992" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
+  "markview.nvim": { "branch": "main", "commit": "02810964cc288065c2919ea7a8d41e72f17ccd8a" },
   "nvim-lspconfig": { "branch": "master", "commit": "0112e1f77983141e1453bd37d124302f1c876c46" },
   "nvim-tree": { "branch": "master", "commit": "8eb5e0bfd1c4da6efc03ab0c1ccf463dbaae831e" },
   "nvim-web-devicons": { "branch": "master", "commit": "1fb58cca9aebbc4fd32b086cb413548ce132c127" },

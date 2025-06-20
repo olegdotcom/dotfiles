@@ -1,6 +1,7 @@
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
+-- TODO: Remap semicolon action to some other key.
 -- Movement remap.
 local modes = { "n", "v", "o" }
 vim.keymap.set(modes, "h", "<Nop>", opts)
