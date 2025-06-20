@@ -6,11 +6,11 @@ return {
       require("aerial").setup({
         backends = { "lsp", "treesitter", "markdown" },
         layout = {
-          default_direction = "prefer_left",
-          min_width = 30,
+          default_direction = "left",
+          min_width = 35,
         },
         show_guides = true,
-        open_automatic = true,
+        open_automatic = false,
         attach_mode = "global",
         open_fold_levels = 99,
       })

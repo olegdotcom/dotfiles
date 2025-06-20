@@ -28,6 +28,13 @@ return {
         size = 20,
         open_mapping = [[<C-t>]],
       })
+      -- Rename all toggleterm buffers to "Terminal"
+      vim.api.nvim_create_autocmd("TermOpen", {
+        pattern = "term://*toggleterm#*",
+        callback = function()
+          vim.api.nvim_buf_set_name(0, "Terminal")
+        end,
+      })
     end,
   }
 }
