@@ -1,20 +1,28 @@
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
--- Splits
+-- Movement remap.
+local modes = { "n", "v", "o" }
+vim.keymap.set(modes, "h", "<Nop>", opts)
+vim.keymap.set(modes, "j", "<Left>", opts)
+vim.keymap.set(modes, "k", "<Down>", opts)
+vim.keymap.set(modes, "l", "<Up>", opts)
+vim.keymap.set(modes, ";", "<Right>", opts)
+
+-- Window splitting.
 map("n", "<leader>-", "<cmd>split<CR>", { desc = "Horizontal split", unpack(opts) })
 map("n", "<leader>|", "<cmd>vsplit<CR>", { desc = "Vertical split", unpack(opts) })
 
 -- Navigating windows.
-map("n", "<C-h>", "<C-w>h", opts)
-map("n", "<C-j>", "<C-w>j", opts)
-map("n", "<C-k>", "<C-w>k", opts)
-map("n", "<C-l>", "<C-w>l", opts)
+map("n", "<C-j>", "<C-w>h", opts)
+map("n", "<C-k>", "<C-w>j", opts)
+map("n", "<C-l>", "<C-w>k", opts)
+map("n", "<C-;>", "<C-w>l", opts)
 -- Same movements for navigating between windows that are terminals.
-map("t", "<C-h>", [[<C-\><C-n><C-w>h]], opts)
-map("t", "<C-j>", [[<C-\><C-n><C-w>j]], opts)
-map("t", "<C-k>", [[<C-\><C-n><C-w>k]], opts)
-map("t", "<C-l>", [[<C-\><C-n><C-w>l]], opts)
+map("t", "<C-j>", [[<C-\><C-n><C-w>h]], opts)
+map("t", "<C-k>", [[<C-\><C-n><C-w>j]], opts)
+map("t", "<C-l>", [[<C-\><C-n><C-w>k]], opts)
+map("t", "<C-;>", [[<C-\><C-n><C-w>l]], opts)
 
 -- Files
 map("n", "<leader>ff", require("fzf-lua").files, { desc = "Find files", unpack(opts) })
