@@ -5,3 +5,8 @@ vim.opt.tabstop = 2       -- How many columns a <Tab> counts for
 vim.opt.shiftwidth = 2    -- Indent amount when using >>, <<, ==
 vim.opt.expandtab = true  -- Convert tabs to spaces
 
+vim.opt.number = true         -- show absolute line number on the current line
+vim.opt.relativenumber = true -- show relative line numbers on all other lines
+
+vim.opt.colorcolumn = "81" -- shows the column after the 80th char
+

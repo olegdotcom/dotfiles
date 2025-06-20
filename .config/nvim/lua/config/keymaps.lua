@@ -16,3 +16,15 @@ map("t", "<C-j>", [[<C-\><C-n><C-w>j]], opts)
 map("t", "<C-k>", [[<C-\><C-n><C-w>k]], opts)
 map("t", "<C-l>", [[<C-\><C-n><C-w>l]], opts)
 
+-- Files
+map("n", "<leader>ff", require("fzf-lua").files, { desc = "Find files", unpack(opts) })
+-- Buffers
+map("n", "<leader>fb", require("fzf-lua").buffers, { desc = "Find buffer", unpack(opts) })
+-- Help tags
+map("n", "<leader>fh", require("fzf-lua").help_tags, { desc = "Find help", unpack(opts) })
+-- Commands
+map("n", "<leader>fc", require("fzf-lua").commands, { desc = "Find commands", unpack(opts) })
+-- Git
+map("n", "<leader>gs", require("fzf-lua").git_status, { desc = "Git status", unpack(opts) })
+map("n", "<leader>gc", require("fzf-lua").git_commits, { desc = "Git commits", unpack(opts) })
+
