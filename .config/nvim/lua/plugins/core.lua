@@ -8,6 +8,8 @@ return {
         flavour = "macchiato", -- options: latte, frappe, macchiato, mocha
       })
       vim.cmd.colorscheme "catppuccin"
+      vim.api.nvim_set_hl(0, "@markup.list.checked", { link = "String" })
+      vim.api.nvim_set_hl(0, "@markup.list.unchecked", { link = "Comment" })
     end,
   },
   {
@@ -36,5 +38,5 @@ return {
         end,
       })
     end,
-  }
+  },
 }
