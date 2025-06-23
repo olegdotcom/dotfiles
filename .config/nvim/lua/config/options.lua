@@ -16,3 +16,6 @@ vim.o.sidescrolloff = 10 -- for horizontal scrolling
 -- Markdown
 vim.o.conceallevel = 2     -- fancy rendering for markdown
 vim.o.concealcursor = "nc" -- Normal and Command mode
+
+-- Hide command line.
+vim.o.cmdheight = 0

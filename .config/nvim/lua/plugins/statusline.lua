@@ -12,8 +12,9 @@ return {
       }
       local FileName = {
         provider = function()
-          local bufname = vim.api.nvim_buf_get_name(0)
-          local filename = vim.fs.basename(bufname)
+          -- local bufname = vim.api.nvim_buf_get_name(0)
+          -- local filename = vim.fs.basename(bufname) -- base file name
+          local filename = vim.fn.expand("%:~") -- full file name
           return " " .. filename .. " "
         end,
         hl = { fg = "white" },
