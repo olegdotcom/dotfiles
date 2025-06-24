@@ -38,8 +38,21 @@ map("n", "<leader>gH", "<cmd>DiffviewFileHistory<cr>", { desc = "Git file histor
 map("n", "<leader>gq", "<cmd>DiffviewClose<cr>", { desc = "Close Git", unpack(opts) })
 
 -- LSP
-map("n", "<leader>d", vim.lsp.buf.definition, { desc = "LSP definition", unpack(opts) })
-map("n", "<leader>r", vim.lsp.buf.references, { desc = "LSP references", unpack(opts) })
-map("n", "<leader>n", vim.lsp.buf.rename, { desc = "LSP rename symbol", unpack(opts) })
-map("n", "<leader>a", vim.lsp.buf.code_action, { desc = "LSP code action", unpack(opts) })
-map("n", "<leader>w", vim.diagnostic.open_float, { desc = "LSP show message", unpack(opts) })
+map("n", "<leader>cd", vim.lsp.buf.definition, { desc = "LSP definition", unpack(opts) })
+map("n", "<leader>cr", vim.lsp.buf.references, { desc = "LSP references", unpack(opts) })
+map("n", "<leader>cn", vim.lsp.buf.rename, { desc = "LSP rename symbol", unpack(opts) })
+map("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP code action", unpack(opts) })
+map("n", "<leader>cw", vim.diagnostic.open_float, { desc = "LSP show message", unpack(opts) })
+
+-- DAP
+map("n", "<Leader>dc", function() require("dap").continue() end, { desc = "DAP: Continue", unpack(opts) })
+map("n", "<Leader>dl", function() require("dap").step_over() end, { desc = "DAP: Step Over", unpack(opts) })
+map("n", "<Leader>dj", function() require("dap").step_into() end, { desc = "DAP: Step Into", unpack(opts) })
+map("n", "<Leader>dk", function() require("dap").step_out() end, { desc = "DAP: Step Out", unpack(opts) })
+map("n", "<Leader>db", function() require("dap").toggle_breakpoint() end,
+  { desc = "DAP: Toggle Breakpoint", unpack(opts) })
+map("n", "<Leader>dB", function() require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: ")) end,
+  { desc = "DAP: Set Conditional Breakpoint", unpack(opts) })
+map("n", "<Leader>dm", function() require("dap").set_breakpoint(nil, nil, vim.fn.input("Log point message: ")) end,
+  { desc = "DAP: Set Log Point", unpack(opts) })
+map("n", "<Leader>du", function() require("dapui").toggle() end, { desc = "DAP: Toggle UI", unpack(opts) })
