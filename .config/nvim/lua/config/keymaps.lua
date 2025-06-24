@@ -6,7 +6,6 @@ local opts = { noremap = true, silent = true }
 map("n", "<leader>-", "<cmd>split<CR>", { desc = "Horizontal split", unpack(opts) })
 map("n", "<leader>|", "<cmd>vsplit<CR>", { desc = "Vertical split", unpack(opts) })
 
-local modes = { "n", "v", "o" }
 -- Navigating windows.
 map("n", "<C-h>", "<C-w>h", opts)
 map("n", "<C-j>", "<C-w>j", opts)
