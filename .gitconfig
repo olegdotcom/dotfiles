@@ -1,3 +1,9 @@
 [user]
 	name = Oleg Morfiianets
 	email = 1759220+olegdotcom@users.noreply.github.com
+[core]
+	pager = delta
+[delta]
+    side-by-side = true
+[interactive]
+	diffFilter = delta --color-only

@@ -10,11 +10,6 @@ map("n", "<C-h>", "<C-w>h", opts)
 map("n", "<C-j>", "<C-w>j", opts)
 map("n", "<C-k>", "<C-w>k", opts)
 map("n", "<C-l>", "<C-w>l", opts)
--- Same movements for navigating between windows that are terminals.
-map("t", "<C-h>", [[<C-\><C-n><C-w>h]], opts)
-map("t", "<C-j>", [[<C-\><C-n><C-w>j]], opts)
-map("t", "<C-k>", [[<C-\><C-n><C-w>k]], opts)
-map("t", "<C-l>", [[<C-\><C-n><C-w>l]], opts)
 
 -- Jump half a screen down/up and center
 map("n", "<C-d>", "<C-d>zz", { desc = "Half screen down and center", unpack(opts) })
