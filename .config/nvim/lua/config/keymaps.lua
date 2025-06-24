@@ -31,6 +31,12 @@ map("n", "<leader>fb", require("fzf-lua").buffers, { desc = "FZF buffer", unpack
 map("n", "<leader>fh", require("fzf-lua").help_tags, { desc = "FZF help", unpack(opts) })
 map("n", "<leader>fc", require("fzf-lua").commands, { desc = "FZF commands", unpack(opts) })
 
+-- Git
+map("n", "<leader>gd", "<cmd>DiffviewOpen<cr>", { desc = "Git diff", unpack(opts) })
+map("n", "<leader>gh", "<cmd>DiffviewFileHistory %<cr>", { desc = "Git file history (current file)", unpack(opts) })
+map("n", "<leader>gH", "<cmd>DiffviewFileHistory<cr>", { desc = "Git file history (entire repo)", unpack(opts) })
+map("n", "<leader>gq", "<cmd>DiffviewClose<cr>", { desc = "Close Git", unpack(opts) })
+
 -- LSP
 map("n", "<leader>d", vim.lsp.buf.definition, { desc = "LSP definition", unpack(opts) })
 map("n", "<leader>r", vim.lsp.buf.references, { desc = "LSP references", unpack(opts) })

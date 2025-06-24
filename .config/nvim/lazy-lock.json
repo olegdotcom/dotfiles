@@ -3,7 +3,8 @@
   "catppuccin": { "branch": "main", "commit": "fa42eb5e26819ef58884257d5ae95dd0552b9a66" },
   "cmp": { "branch": "main", "commit": "b5311ab3ed9c846b585c0c15b7559be131ec4be9" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "a8912b88ce488f411177fc8aed358b04dc246d7b" },
-  "fzf-lua": { "branch": "main", "commit": "fd6588ee052e150eb61f578fa8c40648def5b334" },
+  "diffview.nvim": { "branch": "main", "commit": "4516612fe98ff56ae0415a259ff6361a89419b0a" },
+  "fzf-lua": { "branch": "main", "commit": "da839a79904a35c85d51b731e6a29168063d8ac4" },
   "gitsigns.nvim": { "branch": "main", "commit": "1b0350ab707713b2bc6c236151f1a324175347b1" },
   "headlines.nvim": { "branch": "master", "commit": "bf17c96a836ea27c0a7a2650ba385a7783ed322e" },
   "heirline": { "branch": "master", "commit": "fae936abb5e0345b85c3a03ecf38525b0828b992" },
@@ -14,6 +15,7 @@
   "nvim-treesitter-context": { "branch": "master", "commit": "1a1a7c5d6d75cb49bf64049dafab15ebe294a79f" },
   "nvim-web-devicons": { "branch": "master", "commit": "19d6211c78169e78bab372b585b6fb17ad974e82" },
   "playground": { "branch": "master", "commit": "ba48c6a62a280eefb7c85725b0915e021a1a0749" },
+  "plenary.nvim": { "branch": "master", "commit": "857c5ac632080dba10aae49dba902ce3abf91b35" },
   "toggleterm": { "branch": "main", "commit": "9a88eae817ef395952e08650b3283726786fb5fb" },
   "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" }
 }
