@@ -28,6 +28,8 @@ map("n", "N", "Nzz", { desc = "Find prev and center", unpack(opts) })
 map("x", "<leader>p", [["_dP]], { desc = "Paste without losing yank", unpack(opts) })
 map({ "n", "x" }, "<leader>P", [["+p]], { desc = "Paste from system clipboard", unpack(opts) })
 
+map("n", "U", "<C-r>", { desc = "Redo", unpack(opts) })
+
 -- FZF
 map("n", "<leader>ff", require("fzf-lua").files, { desc = "FZF files", unpack(opts) })
 map("n", "<leader>fb", require("fzf-lua").buffers, { desc = "FZF buffer", unpack(opts) })
