@@ -20,8 +20,9 @@ map("n", "n", "nzz", { desc = "Find next and center", unpack(opts) })
 map("n", "N", "Nzz", { desc = "Find prev and center", unpack(opts) })
 
 -- Copy and paste
-map("x", "<leader>p", [["_dP]], { desc = "Paste without losing yank", unpack(opts) })
-map({ "n", "x" }, "<leader>P", [["+p]], { desc = "Paste from system clipboard", unpack(opts) })
+map("x", "<leader>p", '"_dP', { desc = "Paste without losing yank", unpack(opts) })
+-- map({ "n", "x" }, "<leader>p", '"+p', { desc = "Paste from system clipboard", unpack(opts) })
+-- map({ "n", "x" }, "<leader>y", '"+y', { desc = "Copy to system clipboard", unpack(opts) })
 
 map("n", "U", "<C-r>", { desc = "Redo", unpack(opts) })
 

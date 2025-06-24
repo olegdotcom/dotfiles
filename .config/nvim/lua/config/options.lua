@@ -19,3 +19,6 @@ vim.o.concealcursor = "nc" -- Normal and Command mode
 
 -- Hide command line.
 vim.o.cmdheight = 0
+
+-- Copy and paste uses system clipboard.
+vim.o.clipboard = "unnamedplus"
