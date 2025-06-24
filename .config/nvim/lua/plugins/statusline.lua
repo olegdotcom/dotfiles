@@ -15,16 +15,16 @@ return {
           return vim.b.gitsigns_head ~= nil
         end,
         provider = function()
-          return "  " .. vim.b.gitsigns_head .. " "
-        end,
-        hl = function()
           local gsd = vim.b.gitsigns_status_dict
-          local dirty = gsd and (gsd.added ~= 0 or gsd.changed ~= 0 or gsd.removed ~= 0)
-          return {
-            fg = dirty and "red" or "lightgreen",
-            bold = true,
-          }
+          local added = gsd.added or 0
+          local changed = gsd.changed or 0
+          local removed = gsd.removed or 0
+          return string.format("  %s(+%d -%d ~%d)", vim.b.gitsigns_head, added, removed, changed)
         end,
+        hl = {
+          fg = "lightgreen",
+          bold = true,
+        }
       }
       local FileName = {
         provider = function()
@@ -33,13 +33,14 @@ return {
           local filename = vim.fn.expand("%:~") -- full file name
           return " " .. filename .. " "
         end,
-        hl = function()
-          if vim.bo.modified then
-            return { fg = "red", bold = true }
-          else
-            return { fg = "lightgreen", bold = true }
-          end
+        hl = { fg = "lightblue", bold = true }
+      }
+      local FileModified = {
+        condition = function()
+          return vim.bo.modified
         end,
+        provider = "[+]",
+        hl = { fg = "lightblue", bold = true },
       }
       local Align = { provider = "%=" } -- pushes content to the right
       local FilePercent = {
@@ -50,13 +51,14 @@ return {
           local percent = math.floor((curr / total) * 100)
           return string.format(" %d%%%% ", percent)
         end,
-        hl = { fg = "lightgreen", bold = true },
+        hl = { fg = "lightblue", bold = true },
       }
       require("heirline").setup {
         statusline = {
           Mode,
           Git,
           FileName,
+          FileModified,
           Align,
           FilePercent,
         },
