@@ -5,7 +5,7 @@ return {
     priority = 1000,
     config = function()
       require("catppuccin").setup({
-        flavour = "macchiato", -- options: latte, frappe, macchiato, mocha
+        flavour = "mocha", -- options: latte, frappe, macchiato, mocha
       })
       vim.cmd.colorscheme "catppuccin"
       vim.api.nvim_set_hl(0, "@markup.list.checked", { link = "String" })
@@ -22,22 +22,9 @@ return {
     end,
   },
   {
-    "akinsho/toggleterm.nvim",
-    name = "toggleterm",
-    config = function()
-      require("toggleterm").setup({
-        direction = "horizontal",
-        size = 20,
-        open_mapping = [[<C-t>]],
-      })
-      -- Rename all toggleterm buffers to "Terminal"
-      vim.api.nvim_create_autocmd("TermOpen", {
-        pattern = "term://*toggleterm#*",
-        callback = function()
-          vim.api.nvim_buf_set_name(0, "Terminal")
-        end,
-      })
-    end,
+    "numToStr/Comment.nvim",
+    opts = {},
+    lazy = false,
   },
   {
     "folke/which-key.nvim",

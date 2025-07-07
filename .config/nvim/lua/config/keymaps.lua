@@ -26,6 +26,15 @@ map("x", "<leader>p", '"_dP', { desc = "Paste without losing yank", unpack(opts)
 
 map("n", "U", "<C-r>", { desc = "Redo", unpack(opts) })
 
+-- Comments
+map("n", "<leader>/", function() require("Comment.api").toggle.linewise.current() end,
+  { desc = "Toggle comment", unpack(opts) })
+map("v", "<leader>/", function()
+  local esc = vim.api.nvim_replace_termcodes("<ESC>", true, false, true)
+  vim.api.nvim_feedkeys(esc, "nx", false)
+  require("Comment.api").toggle.linewise(vim.fn.visualmode())
+end, { desc = "Toggle comment (visual mode)", unpack(opts) })
+
 -- FZF
 map("n", "<leader>ff", require("fzf-lua").files, { desc = "FZF files", unpack(opts) })
 map("n", "<leader>fb", require("fzf-lua").buffers, { desc = "FZF buffer", unpack(opts) })

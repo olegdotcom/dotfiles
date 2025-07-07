@@ -22,3 +22,12 @@ vim.o.cmdheight = 0
 
 -- Copy and paste uses system clipboard.
 vim.o.clipboard = "unnamedplus"
+vim.g.clipboard = "osc52"
+
+vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.swapfile = false
+
+-- Search case-insensitive by default, but case-sensitive when the search query has upper case letters.
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
